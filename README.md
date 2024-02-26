@@ -18,7 +18,11 @@ cd forecast
 bundle install
 ```
 
-Copy this string `07df629d7c3432e8797301e9732cc01d` exactly as it is (no newline) into a file `config/master.key`
+Copy this string
+```shell
+07df629d7c3432e8797301e9732cc01d
+```
+exactly as it is (no newline) into a file `config/master.key`
 This is needed to access the encrypted API credentials from the code. In a normal work project, this would be shared via back channels with other team members.
 
 ```shell
@@ -32,7 +36,10 @@ The app will be available at [http://localhost:3000](http://localhost:3000)
 
 ## Testing
 
-Run the test suite with `bundle exec rspec`
+Run the test suite with
+```shell
+bundle exec rspec
+```
 
 ## Project implementation
 
