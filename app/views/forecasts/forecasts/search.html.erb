@@ -1,8 +1,8 @@
 <%= render 'search_heading', forecast: @forecast %>
 <%= render 'search_form' %>
 
-<% if @forecast&.error.present? %>
-  <%= render 'search_errors', error: @forecast&.error %>
-<% elsif @forecast.present? %>
+<% if @forecast&.valid? %>
   <%= render 'search_results', forecast: @forecast, retrieved: @retrieved %>
+<% elsif @forecast %>
+  <%= render 'search_errors', error: @forecast.error %>
 <% end %>
