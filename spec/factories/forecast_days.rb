@@ -5,7 +5,7 @@ FactoryBot.define do
     temp { 55 }
     low_temp { 45 }
     high_temp { 65 }
-    description { "A nice sunny day" }
+    description { 'A nice sunny day' }
 
     initialize_with { Weather::VisualCrossing::ForecastDay.new({}) }
   end

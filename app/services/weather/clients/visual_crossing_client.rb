@@ -18,17 +18,15 @@ module Weather
           @error = response.body
           nil
         end
-      rescue Exception => ex
-        Rails.logger.error(ex.message)
-        Rails.logger.error(ex.backtrace.join("\n"))
+      rescue Exception => e
+        Rails.logger.error(e.message)
+        Rails.logger.error(e.backtrace.join("\n"))
         # In a production app, notify the remote monitoring service of the error
         @error = response.body
         nil
       end
 
-      def error
-        @error
-      end
+      attr_reader :error
     end
   end
 end

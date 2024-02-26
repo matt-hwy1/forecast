@@ -1,7 +1,6 @@
 module Weather
   module VisualCrossing
     class Forecast < Weather::Base::Forecast
-
       def initialize(location)
         self.original_location = location
       end
