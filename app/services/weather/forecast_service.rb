@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'clients/visual_crossing_client'
 
 module Weather

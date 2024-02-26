@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Weather
   module VisualCrossing
     class Forecast < Weather::Base::Forecast

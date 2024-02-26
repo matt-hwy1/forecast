@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ForecastsHelper
   def format_date_time(date_time)
     date_time.to_formatted_s(:long_ordinal)
