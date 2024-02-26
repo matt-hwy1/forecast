@@ -1,0 +1,9 @@
+<%= form_tag forecasts_search_path, method: :get, class: 'forecast-search-form' do %>
+  <%= text_field_tag :location, params[:location], placeholder: "ZIP code or address",
+                                    autofocus: "autofocus",
+                                    class: 'search-input' %>
+
+  <br/>
+
+  <%= submit_tag (params[:location].present? ?  'Search Again!' : "Search!"), name: nil, class: 'search-button' %>
+<% end %>

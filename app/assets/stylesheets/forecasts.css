@@ -1,0 +1,24 @@
+.forecast-search-form * {
+  font-size: 20px;
+  line-height: 30px;
+  border-radius: 5px;
+}
+
+.forecast-search-form .search-input{
+  width: 300px;
+}
+
+.forecast-search-form .search-button {
+    margin: 30px;
+    height: 40px;
+    width: 200px;
+}
+
+.forecast-search-results {
+  text-align: left;
+}
+
+.forecast-search-results .forecast-search-result-heading {
+  font-weight: bolder;
+}
+

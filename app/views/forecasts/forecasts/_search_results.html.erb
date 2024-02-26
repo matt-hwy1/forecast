@@ -1,0 +1,41 @@
+<div class="forecast-search-results">
+  <h2><%= forecast.location %></h2>
+
+  <div class="forecast-search-result-heading">
+    <% if retrieved %>
+      Forecast freshly retrieved
+    <% else %>
+      Forecast cached since:
+      <br/>
+      <%= format_date_time_ago(forecast.timestamp) %> ago
+    <% end %>
+    at <%= format_date_time(forecast.timestamp) %>
+    in the
+    <%= forecast.timezone.humanize.titleize %> time zone
+  </div>
+
+  <hr/>
+
+  <div class="forecast-search-result-data">
+    <h3>Current conditions</h3>
+    <div class="forecast-search-result-field">
+      Temperature: <%= forecast.current_temp %>&deg; F
+      </div>
+    <div class="forecast-search-result-field">
+      Humidity: <%= forecast.humidity %> %
+      </div>
+  </div>
+
+  <hr/>
+  <div class="forecast-search-result-data">
+    <h3>Tomorrow's forecast</h3>
+    <%= render "forecast_day", day: forecast.tomorrow %>
+  </div>
+
+  <hr/>
+
+  <div class="forecast-search-result-data">
+    <h3>5 day forecast</h3>
+    <%= render "forecast_day", day: forecast.five_day %>
+  </div>
+</div>

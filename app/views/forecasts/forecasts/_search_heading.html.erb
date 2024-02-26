@@ -1,0 +1,7 @@
+<% if forecast && forecast.error.blank? %>
+  <% content_for :title, "Weather forecast for #{forecast.location}" %>
+  <h1>Weather forecast for <%= forecast.location %></h1>
+<% else %>
+  <% content_for :title, "Search for a weather forecast by location" %>
+  <h1>Search for a weather forecast by location</h1>
+<% end %>
