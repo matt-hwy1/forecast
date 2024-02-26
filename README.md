@@ -6,15 +6,27 @@
 - It calls out to an external weather API from [Visual Crossing](https://www.visualcrossing.com/)
 - To install, run the following commands at a Unix command line:
 
-`git clone git@github.com:matt-hwy1/forecast.git`\
-`cd forecast`\
-`bundle install`
+```shell
+git clone git@github.com:matt-hwy1/forecast.git
+```
+
+```shell
+cd forecast
+```
+
+```shell
+bundle install
+```
 
 Copy this string `07df629d7c3432e8797301e9732cc01d` exactly as it is (no newline) into a file `config/master.key`
-This is needed to access the encrypted API credentials from the code.
+This is needed to access the encrypted API credentials from the code. In a normal work project, this would be shared via back channels with other team members.
 
-`bin/rails dev:cache`\
-`bin/rails server`
+```shell
+bin/rails dev:cache
+```
+```shell
+bin/rails server
+```
 
 The app will be available at [http://localhost:3000](http://localhost:3000)
 
