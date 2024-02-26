@@ -8,7 +8,11 @@
 
 `git clone git@github.com:matt-hwy1/forecast.git`\
 `cd forecast`\
-`bundle install`\
+`bundle install`
+
+Copy this string `07df629d7c3432e8797301e9732cc01d` exactly as it is (no newline) into a file `config/master.key`
+This is needed to access the encrypted API credentials from the code.
+
 `bin/rails dev:cache`\
 `bin/rails server`
 
