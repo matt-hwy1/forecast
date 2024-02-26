@@ -1,3 +1,0 @@
-class ForecastService
-
-end
